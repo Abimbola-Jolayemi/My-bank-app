@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c4e1963-7494-4e2c-a6ed-43dbb955d57e" name="Changes" comment="" />
+    <list default="true" id="8c4e1963-7494-4e2c-a6ed-43dbb955d57e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/bank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myBankApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/myBankApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bankTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bankTest.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +214,9 @@
       <workItem from="1725036290297" duration="580000" />
       <workItem from="1725036903646" duration="11638000" />
       <workItem from="1725065561127" duration="12058000" />
-      <workItem from="1725173506475" duration="20485000" />
+      <workItem from="1725173506475" duration="21683000" />
+      <workItem from="1725222170010" duration="5460000" />
+      <workItem from="1725246532530" duration="2973000" />
     </task>
     <servers />
   </component>
@@ -219,8 +226,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/techBlazers$cornflakes.coverage" NAME="cornflakes Coverage Results" MODIFIED="1724767876961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/techBlazers$cornFlakes1.coverage" NAME="cornFlakes1 Coverage Results" MODIFIED="1724160857006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/techBlazers$myBankApp.coverage" NAME="myBankApp Coverage Results" MODIFIED="1725211549277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/techBlazers$.coverage" NAME=" Coverage Results" MODIFIED="1725207432659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/techBlazers$myBankApp.coverage" NAME="myBankApp Coverage Results" MODIFIED="1725227480730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/techBlazers$.coverage" NAME=" Coverage Results" MODIFIED="1725223671652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/techBlazers$main.coverage" NAME="main Coverage Results" MODIFIED="1725173735609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/techBlazers$classPractice.coverage" NAME="classPractice Coverage Results" MODIFIED="1724169613037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/techBlazers$playground.coverage" NAME="playground Coverage Results" MODIFIED="1724152192449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

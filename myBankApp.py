@@ -35,15 +35,61 @@ def main():
                             break
 
                 case "2":
-                    account_number = input("Enter your account number: ")
-                    found_account = bank.validate_account_number(account_number)
-                    if found_account is None:
-                        print("Error: Account number not found!!!")
-                        print("Please try again.")
-                    else:
-                        amount = int(input("Enter amount to be deposited: "))
-                        bank.deposit(amount, account_number)
-                        print(f"#{amount} has been deposited into account: {account_number}")
+                    while True:
+                        try:
+                            account_number = input("Enter your account number: ")
+                            if not bank.validate_account_number(account_number):
+                                print("Error: Account number not found.")
+                            else:
+                                break
+                        except ValueError:
+                            print("Error: Invalid account number input.")
+                    while True:
+                        try:
+                            amount = int(input("Enter amount to be deposited: "))
+                            if amount > 0:
+                                break
+                            else:
+                                print("Amount must be positive.")
+                        except ValueError:
+                            print("Invalid input. Please enter a valid number.")
+                    bank.deposit(amount, account_number)
+                    print(f"#{amount} has been successfully deposited into account: {account_number}")
+                    print(f"Balance is now: #{bank.validate_account_number(account_number).get_balance()}")
+
+                case "3":
+                    while True:
+                        try:
+                            account_number = input("Enter your account number: ")
+                            if not bank.validate_account_number(account_number):
+                                print("Error: Account number not found.")
+                            else:
+                               break
+                        except ValueError:
+                            print("Invalid input. Please enter a valid number.")
+                    while True:
+                        try:
+                            amount = int(input("Enter amount to be withdrawn: "))
+                            if amount > 0 and amount <= bank.validate_account_number(account_number).get_balance():
+                                break
+                            else:
+                                print("Error: Insufficient balance.")
+                        except ValueError:
+                            print("Invalid input. Please enter a valid number.")
+
+                    while True:
+                        try:
+                            pin = input("Enter your 4-digit pin: ")
+                            if len(pin) != 4 or not pin.isdigit():
+                                print("Error: PIN must be exactly 4 digits.")
+                                break
+                            else:
+                                break
+                        except ValueError:
+                            print("INVALID INPUT!!!: PIN must be exactly 4 digits.")
+                    bank.withdraw(amount, account_number, pin)
+                    print(f"#{amount} has been successfully withdrawn into account: {account_number}")
+                    print(f"Balance is now: #{bank.validate_account_number(account_number).get_balance()}")
 
                 case "4":
                     while True:
@@ -56,9 +102,10 @@ def main():
                     while True:
                         receiver_account_number = input("Enter receiver account number: ")
                         found_receiver_account = bank.validate_account_number(receiver_account_number)
-                        if found_receiver_account is not None and receiver_account_number != sender_account_number:
+                        if (found_receiver_account is not None and
+                                receiver_account_number != sender_account_number):
                             break
-                        print("Error: Receiver account number not found. Please try again.")
+                        print("Error: Receiver account number not found or same as sender's account. Please try again.")
 
                     while True:
                         amount = input("Enter amount to be transferred: ")
@@ -73,12 +120,13 @@ def main():
                             break
                         print("Error: Invalid PIN. Please try again.")
 
-                    bank.withdraw(amount, sender_account_number, pin)
-                    bank.deposit(amount, receiver_account_number)
-                    print(
-                        f"#{amount} has been transferred from account {sender_account_number} to {receiver_account_number}")
-
-
+                    if found_sender_account.get_balance(pin) >= amount:
+                        bank.withdraw(amount, sender_account_number, pin)
+                        bank.deposit(amount, receiver_account_number)
+                        print(
+                            f"#{amount} has been transferred from account {sender_account_number} to {receiver_account_number}")
+                    else:
+                        print("Error: Insufficient funds.")
 
 
 if __name__ == "__main__":

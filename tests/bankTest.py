@@ -32,6 +32,14 @@ class MyTestCase(TestCase):
         self.bank.withdraw(2000, "1000001", "0000")
         self.assertEqual(self.bank_account_1.get_balance(), 3000)
 
+    def test_that_bank_can_check_balance(self):
+        self.bank.deposit(5000, "1000001")
+        self.assertEqual(self.bank.check_balance("1000001", "0000"), 5000)
+
+    def test_that_bank_cannot_check_balance_of_an_unexisting_account(self):
+        self.bank.deposit(5000, "1000009")
+        self.assertEqual(self.bank.check_balance("1000009", "0000"), "Invalid account details")
+
     def test_that_bank_can_transfer_from_user1_to_user2(self):
         self.bank.deposit(10000, "1000001")
         self.bank.transfer("1000001", "1000002", 5000, "0000")

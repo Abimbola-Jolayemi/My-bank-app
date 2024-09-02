@@ -55,6 +55,13 @@ class Bank:
         else:
             return "Invalid recipient's account number"
 
+    def check_balance(self, account_number, pin):
+        validated_account_number = self.validate_account_number(account_number)
+        if validated_account_number is not None and validated_account_number.validate_pin(pin):
+            return validated_account_number.get_balance()
+        else:
+            return "Invalid account details"
+
     def delete_account(self, account_number):
         account_to_delete = self.validate_account_number(account_number)
         if account_to_delete:
